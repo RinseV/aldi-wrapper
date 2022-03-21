@@ -1,4 +1,5 @@
 import { Image } from '../product/productModel';
+import { ColorSchema } from '../promotion';
 
 export interface RecipeQueryModel {
     recipes: RecipeModel[];
@@ -21,18 +22,18 @@ export interface ExtendedRecipeModel {
     additionalTime: number;
     additionalTimeType: string;
     category: string;
-    colorSchema?: any;
+    colorSchema?: ColorSchema;
     dateFirstPublication: Date;
     difficultyLevel: string;
     ingredients: Ingredient[];
-    ingredientsTips: any[];
+    ingredientsTips: unknown[];
     preparationSteps: PreparationStep[];
     preparationStepsTips: PreparationStepsTip[];
     primaryImage: Image;
     recipeOfTheWeek: boolean;
     recipeUrl: string;
     servingsNumber: number;
-    tips: any[];
+    tips: unknown[];
     title: string;
     withVideo: boolean;
     workingTime: number;
