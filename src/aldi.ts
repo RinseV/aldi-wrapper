@@ -39,10 +39,6 @@ export class Aldi {
         return this.aldiRecipe;
     }
 
-    async post(path: string, body: Record<string, unknown>, additionalRequestOptions?: AdditionalRequestOptions) {
-        return this.request(path, requestMethod.POST, body, additionalRequestOptions);
-    }
-
     async get(path: string, additionalRequestOptions?: AdditionalRequestOptions) {
         return this.request(path, requestMethod.GET, undefined, additionalRequestOptions);
     }

@@ -2,6 +2,10 @@ import { AdditionalRequestOptions } from '../aldi';
 import { AldiObject } from '../base/aldiObject';
 import { ExtendedRecipeModel, RecipeQueryModel } from './recipeModel';
 
+export interface RecipeOptions {
+    amount?: number;
+}
+
 export class Recipe extends AldiObject {
     /**
      * Gets recipe from ID
@@ -16,13 +20,14 @@ export class Recipe extends AldiObject {
 
     /**
      * Get recipes featured on the front page
-     * @param amount Amount of recipes to get (default 20)
+     * @param options Query options
+     * @param options.amount Amount of recipes to get (default 20)
      */
     async getFeaturedRecipes(
-        amount?: number,
+        options?: RecipeOptions,
         additionalRequestOptions?: AdditionalRequestOptions
     ): Promise<RecipeQueryModel> {
-        const size = amount || 20;
+        const size = options?.amount || 20;
         return await this.aldi.get(`recipes/size=${size}.json`, additionalRequestOptions);
     }
 
