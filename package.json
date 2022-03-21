@@ -29,5 +29,11 @@
   },
   "dependencies": {
     "axios": "^0.26.1"
+  },
+  "homepage": "https://github.com/RinseV/aldi-wrapper",
+  "bugs": "https://github.com/RinseV/aldi-wrapper/issues",
+  "repository": {
+    "url": "https://github.com/RinseV/aldi-wrapper",
+    "type": "git"
   }
 }
