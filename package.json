@@ -1,0 +1,26 @@
+{
+    "name": "aldi-wrapper",
+    "version": "1.0.0",
+    "description": "API Wrapper for Aldi (NL)",
+    "keywords": [
+        "Aldi",
+        "Supermarket",
+        "Supermarkt"
+    ],
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "rollup --config rollup.config.ts --configPlugin typescript",
+        "start": "ts-node src/index.ts"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@rollup/plugin-typescript": "^8.3.1",
+        "rollup": "^2.70.1",
+        "ts-node": "^10.7.0",
+        "typescript": "^4.6.2"
+    },
+    "dependencies": {
+        "axios": "^0.26.1"
+    }
+}
